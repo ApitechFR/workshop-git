@@ -1,4 +1,4 @@
-# Workshop Git et GitHub
+# Workshop Git / GitHub
 
 Bienvenue à ce workshop Git et GitHub! L'objectif de ce workshop est de vous familiariser avec les commandes de base de Git, le principe de Gitflow, et l'utilisation de GitHub, tout en intégrant Git à vos IDEs (Visual Studio et/ou Visual Studio Code).
 
@@ -119,6 +119,8 @@ Gitflow repose sur l'utilisation de branches spécifiques pour différentes phas
    - Corrigez le bug, puis committez et poussez les modifications.
    - Fusionnez la branche `hotfix` dans `main` et `develop`, puis créez un tag si nécessaire.
 
+
+
 Gitflow permet ainsi de structurer efficacement le développement, la préparation des versions et la correction rapide des bugs, tout en maintenant une qualité de code élevée.
 
 ## 3. Pré-requis
@@ -177,37 +179,48 @@ Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du 
 
 4. **Copiez le lien de clonage :**
    
+   ![image]()
+   
    - Sur la page principale du dépôt, cherchez le bouton vert "Code" en haut à droite de la liste des fichiers.
+   
    - Cliquez sur le bouton "Code" pour ouvrir un menu déroulant.
+   
    - Dans ce menu, vous verrez plusieurs options, y compris l'URL de clonage du dépôt.
+     
      - **Clonage via HTTPS :** Cliquez sur l'icône de copie à côté de l'URL commençant par `https://`.
      - **Clonage via SSH :** Si vous avez configuré une clé SSH, vous pouvez cliquer sur l'onglet "SSH" et copier l'URL commençant par `git@github.com:`.
+     
+     Dans notre cas, on va utiliser *HTTPS*
 
 ### Cloner le dépôt avec Git Bash
 
 1. **Ouvrez Git Bash :**
    
-   - Si vous utilisez Windows, vous pouvez ouvrir Git Bash en le recherchant dans le menu Démarrer.
+   - Si vous utilisez Windows, vous pouvez ouvrir Git Bash avec un clic droit dans le répertoire où vous souhaitez cloner le dépôt
+   
+   <img title="" src="file:///C:/Users/louisc/AppData/Roaming/marktext/images/2024-06-06-16-45-13-image.png" alt="" width="390" data-align="center">
 
 2. **Cloner le dépôt :**
    
-   - Une fois que Git Bash est ouvert, naviguez jusqu'au répertoire où vous souhaitez cloner le dépôt.
-     
-     `cd /chemin/vers/votre/repertoire`
-   
    - Utilisez la commande `git clone` suivie de l'URL que vous avez copiée.
      
-     `git clone https://github.com/<votre-utilisateur>/workshop-git.git`
+     ```bash
+     git clone https://github.com/ApitechFR/workshop-git.git
+     ```
    
    - Si vous utilisez SSH :
      
-     `git clone git@github.com:<votre-utilisateur>/workshop-git.git`
+     ```bash
+     git clone git@github.com:ApitechFR/workshop-git.git
+     ```
 
 3. **Accédez au répertoire cloné :**
    
    - Une fois le clonage terminé, naviguez dans le répertoire du dépôt cloné :
      
-     `cd workshop-git`
+     ```bash
+     cd workshop-git
+     ```
 
 ### Authentification
 
@@ -221,6 +234,10 @@ Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du 
 
 ## 5. Utilisation d'une nouvelle branche
 
+À ce stade, la situation ressemble à ça : 
+
+![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-12-17-02-27-image.png)
+
 ### Créer la branche d'un côté
 
 *Cette partie est à effectuer par le membre A, avec toute l'attention du membre B.*
@@ -233,6 +250,8 @@ Créons une nouvelle branche portant le nom du binôme (pour l'exemple je prends
 git checkout develop #on se met sur develop
 git checkout -b tic-et-tac #on se met sur une nouvelle branche tic-et-tac
 ```
+
+![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-12-17-03-08-image.png)
 
 C'est la commande `git push` qui nous permettra de mettre la branche sur le dépôt.
 
@@ -250,6 +269,8 @@ git push -u origin tic-et-tac
 
 `origin` étant le mot clé désignant le dépôt.
 
+![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-12-17-03-39-image.png)
+
 ### Récupérer la branche de l'autre côté
 
 *Cette partie est à effectuer par le membre B, avec toute l'attention du membre A*
@@ -262,12 +283,18 @@ Rien de plus simple, pour cela on tape la commande :
 git fetch
 ```
 
+## ![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-12-17-04-07-image.png)
+
 ## 6. 1ère Modification du fichier `finishers.txt`
 
 *Cette partie est à réaliser par le membre A, avec toute l'attention du membre B.*
 
 Ici, on va voir et expliquer tout le process pour la modification d'un fichier du projet. Dans un premier temps, pour faciliter la compréhension, on parlera d'un cas général en détaillant chaque étape. Dans un second temps, on verra comment utiliser Visual Studio et Visual Studio Code pour faire les choses plus facilement.
 Prêt ? C'est parti !🏃‍♂️
+
+Voilà, en image et en résumé, ce que l'on va faire ici : 
+
+![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-13-17-03-45-image.png)
 
 ### Cas général : Modification directe
 
@@ -298,7 +325,7 @@ Dans notre cas, on peut donc taper :
 
 #### Push
 
-On a déjà pushé la branche, donc on peut simplement taper : 
+On a déjà pushé la branche une première fois, donc on peut simplement taper : 
 
 ```bash
 git push
@@ -341,8 +368,6 @@ Le membre A vient de faire sa modification. C'est donc à votre tour.
 - Sauvegardez le fichier.
 - Utilisez git bash pour add, commit et push
 
-
-
 Là, si vous avez bien travaillé, il devrait y avoir un problème. Et quel problème.... 
 
 Ce qui se passe est un "conflit". Cela arrive parce que vos modifications ont pour point de départ une version du fichier qui n'est plus d'actualité. Par conséquent git ne sait pas quelle modification choisir entre la vôtre et celle de votre binôme. Pour vous l'indiquer, la mention `MERGING` est affichée à côté du nom de la branche dans git bash.
@@ -354,8 +379,6 @@ Ouvrez votre projet sur Visual Studio Code, puis cliquez sur finisers.txt depuis
 Les parties conflictuelles du fichier se colorent et VSCode vous propose différentes solutions : "Accept current change", "Accept incoming", "Accept both", "Compare". Dans notre cas, on veut bien sûr conserver les deux modifications, donc on clique sur "Accept both changes".
 
 Magie, tout est réglé.
-
-
 
 Faites un Add, Commit et Push une nouvelle fois, et tout va de nouveau bien se passer.
 
@@ -394,8 +417,6 @@ Vous ne pouvez plus reculer, vous êtes pris au piège... Cliquez sur le lien et
 
 Vous pouvez également faire une suggestion de modification pour faciliter la vie de votre collègue.
 
-
-
 ## 10. Commandes utiles
 
 Ce workshop aborde les points élémentaires de Git, mais vous vous trouverez aussi dans des situations moins conventionnelles.
@@ -425,8 +446,6 @@ Voici donc quelques commandes Git que vous pouvez utiliser pour vous en sortir :
 - `git fetch --all` : Récupère les changements d'obets et de références du dépôt. Globalement, cela sert à récupérer une branche du dépôt qui n'existe pas en local. Si Jean-Michel a créé une branche `a` et l'a mise sur le dépôt, vous pouvez taper `git fetch --all` pour que vous puissiez aussi travailler sur sa branche.
 
 - `git bisect` : Cette commande est moins necessaire, mais extrêmement utile en cas de coup dur. Elle sert à détecter quel commit est responsable d'un bug, et facilite donc la correction. Je vous invite à aller voir dans la documentation pour en savoir davantage.
-
-
 
 Si quelque chose n'est pas clair, allez voir la documentation Git, qui est très complète et très instructive.
 
