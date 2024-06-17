@@ -119,8 +119,6 @@ Gitflow repose sur l'utilisation de branches spécifiques pour différentes phas
    - Corrigez le bug, puis committez et poussez les modifications.
    - Fusionnez la branche `hotfix` dans `main` et `develop`, puis créez un tag si nécessaire.
 
-
-
 Gitflow permet ainsi de structurer efficacement le développement, la préparation des versions et la correction rapide des bugs, tout en maintenant une qualité de code élevée.
 
 ## 3. Pré-requis
@@ -179,7 +177,7 @@ Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du 
 
 4. **Copiez le lien de clonage :**
    
-   ![image]()
+   ![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-15-42-34-image.png)
    
    - Sur la page principale du dépôt, cherchez le bouton vert "Code" en haut à droite de la liste des fichiers.
    
@@ -244,7 +242,7 @@ Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du 
 
 Gitflow préconise l'utilisation de branches pour différentes étapes du développement. Pour ce workshop, nous allons créer une branche à partir de `develop`.
 
-Créons une nouvelle branche portant le nom du binôme (pour l'exemple je prends "tic-et-tac", mais trouvez votre propore style) dérivée de develop :
+Créons une nouvelle branche portant le nom du binôme (pour l'exemple je prends "tic-et-tac", mais <mark>**trouvez votre propore style**</mark> pour ne pas prendre un nom déjà pris...) dérivée de develop :
 
 ```bash
 git checkout develop #on se met sur develop
@@ -289,7 +287,7 @@ git fetch
 
 *Cette partie est à réaliser par le membre A, avec toute l'attention du membre B.*
 
-Ici, on va voir et expliquer tout le process pour la modification d'un fichier du projet. Dans un premier temps, pour faciliter la compréhension, on parlera d'un cas général en détaillant chaque étape. Dans un second temps, on verra comment utiliser Visual Studio et Visual Studio Code pour faire les choses plus facilement.
+Ici, on va voir et expliquer tout le process pour la modification d'un fichier du projet. Dans un premier temps, pour faciliter la compréhension, on travaillera avec un cas général en détaillant chaque étape. Dans un second temps, on verra comment faire la même chose en passant par Visual Studio et Visual Studio Code pour simplifier les étapes.
 Prêt ? C'est parti !🏃‍♂️
 
 Voilà, en image et en résumé, ce que l'on va faire ici : 
@@ -307,11 +305,17 @@ Voilà, en image et en résumé, ce que l'on va faire ici :
 
 C'est la commande `git add` qui est utilisée pour ajouter des modifications à l'index (ou staging area) de Git, en préparation pour un commit. Elle indique à Git de suivre les modifications apportées aux fichiers spécifiés, en les incluant dans le prochain commit. Par exemple, après avoir modifié un fichier, vous utilisez `git add <nom-du-fichier>` pour inclure ces modifications. Vous pouvez aussi utiliser `git add .` pour ajouter toutes les modifications dans le répertoire courant.
 
+Vous pouvez consulter l'état de votre staging area avec la commande `git status`. Vous verrez alors ceci : 
+
+![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-15-50-18-Clipboard%20-%2017%20juin%202024%2015_48.png)
+
 Dans notre cas, on peut donc taper :
 
 ```bash
 git add finishers.txt
 ```
+
+Maintenant si vous re-tapez `git status`, vous verrez que le fichier a bien été ajouté.
 
 #### Commit
 
@@ -320,7 +324,7 @@ La commande `git commit` est utilisée pour enregistrer les modifications ajout�
 Dans notre cas, on peut donc taper :
 
 ```bash
-`git commit -m "Ajout de tic-et-tac à finishers.txt"
+git commit -m "Ajout de tic-et-tac à finishers.txt"
 ```
 
 #### Push
@@ -335,24 +339,55 @@ git push
 
 Refaisons tout ça beaucoup plus simplement grâce à un outil rapide, robuste et parfaitement stable : Visual Studio.
 
-1. Ouvrez le projet `workshop-git` dans Visual Studio.
+1. Ouvrez le dossier local`workshop-git` dans Visual Studio.
 2. Ouvrez `finishers.txt`.
 3. À côté de votre nom, inscrivez votre film préféré. Si êtes un(e) vrai(e) cinéphile, vous pouvez inscrire "Prénom Nom - Les Bronzés 3" par exemple.
 4. Sauvegardez le fichier.
-5. Intégrez Git à Visual Studio 
-6. Allez dans "Team Explorer" > "Git Changes".
+5. Allez dans "Affichage" > "Modifications Git" pour voir la liste de vos modifications. Cette liste est la même que la "staged area", vue plus haut.
 
-Ici, on peut observer les modifications effectuées, et les ajouter au prochain commit directement depuis Visual Studio.
+Ici, on peut observer les modifications effectuées en double cliquant sur le fichier finishers.txt, et les ajouter au prochain commit directement depuis Visual Studio, comme avec la commande `git add`grâce au bouton "+".
+
+![](C:\Users\louisc\Desktop\Clipboard%20-%2017%20juin%202024%2015_55.png)
+
+<img title="" src="file:///C:/Users/louisc/Desktop/Clipboard%20-%2017%20juin%202024%2015_57.png" alt="" data-align="center" width="273">
+
+Faites-la uniquement pour le fichier finishers.txt, et vous obtiendrez ça :
+
+<img title="" src="file:///C:/Users/louisc/Desktop/thumb-Clipboard%20-%2017%20juin%202024%2016_01.png" alt="" data-align="center" width="236">
+
+Nous avons volontairement ignoré le dossier "vs" créé automatiquement par visual studio pour ne pas polluer notre repo distant. Ce que l'on voit ici est la même chose que ce que vous voyez si vous retournez dans git bash et tapez `git status`. (Essayez si vous êtes cap' 😉).
+
+Pour faire le commit, entrez votre description puis cliquez sur le bouton "Valider les changements indexés". C'est un diminutif pour dire "commit" 🤫.
+
+<img title="" src="file:///C:/Users/louisc/Desktop/Clipboard%20-%2017%20juin%202024%2016_11.png" alt="" data-align="center" width="290">
+
+Cliquez ensuite sur "Envoyer" pour push :
+
+<img title="" src="file:///C:/Users/louisc/Desktop/thumb-Clipboard%20-%2017%20juin%202024%2016_12.png" alt="" data-align="center" width="244">
+
+Bravo ! Vous savez maintenant comment utiliser git avec Visual Studio !
 
 ### Modification avec Visual Studio Code
 
-1. Ouvrez le projet `workshop-git` dans VSCode.
+1. Ouvrez le dossier local `workshop-git` dans VSCode.
 2. Ouvrez `finishers.txt`.
 3. À côté de votre nom et votre film préféré, ajouter votre animal préféré. Par exemple, si vous êtes féru de chasse, vous pouvez écrire "Prénom Nom - Les Bronzés 3 - Sanglier".
 4. Sauvegardez le fichier.
-5. Intégrez Git à VSCode via l'extension Git intégrée.
+5. De la même manière qu'avec Visual Studio, vous pouvez visualiser les modifications Git depuis l'onglet "Source control" à Gauche :
+
+![](C:\Users\louisc\Desktop\Clipboard%20-%2017%20juin%202024%2016_35.png)
 
 Ici, on peut observer les modifications effectuées, et les ajouter au prochain commit directement depuis Visual Studio Code.
+
+Faites la même chose qu'avec Visual Studio :
+
+- Cliquez sur le bouton "+" à côté du fichier `finishers.txt`
+
+- Entrez une description pour votre commit
+
+- Cliquez sur le bouton "commit"
+
+- Puis pushez avec le bouton "Push"
 
 ## 7. 2ème Modification du fichier `finishers.txt` (gestion de conflit)
 
