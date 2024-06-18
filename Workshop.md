@@ -48,11 +48,13 @@ Pour les plus curieux, une partie supplémentaire est disponible, à propos des 
 
 7. **Pull Request sur GitHub**
 
-8. **Parlons de GitFlow**
+8. **Faire un code review**
 
-9. **Commandes utiles**
+9. **Merger une Pull Request**
 
-10. **Faire un code Review**
+10. **Parlons de GitFlow**
+
+11. **Commandes utiles**
 
 ## 1. Késako ?
 
@@ -66,7 +68,7 @@ Pour ceux qui se demandent ce qu'ils font là et s'ils auront la force d'aller p
 
 #### Installation de Git
 
-*Cette partie est à effectuer par les deux membres du binôme.*
+***Cette partie est à effectuer par les deux membres du binôme.***
 
 1. **Windows**:
    
@@ -97,7 +99,7 @@ Pour ceux qui se demandent ce qu'ils font là et s'ils auront la force d'aller p
 
 ## 3. Cloner le dépôt
 
-*Cette partie est à effectuer par les deux membres du binôme.*
+***Cette partie est à effectuer par les deux membres du binôme.***
 
 Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du dépôt. Voici les étapes détaillées pour trouver ce lien et cloner le dépôt à l'aide de Git Bash.
 
@@ -179,7 +181,7 @@ Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du 
 
 ### Créer la branche d'un côté
 
-*Cette partie est à effectuer par le membre A, avec toute l'attention du membre B.*
+***Cette partie est à effectuer par le membre A, avec toute l'attention du membre B.***
 
 Gitflow préconise l'utilisation de branches pour différentes étapes du développement. Pour ce workshop, nous allons créer une branche à partir de `develop`.
 
@@ -212,7 +214,7 @@ git push -u origin tic-et-tac
 
 ### Récupérer la branche de l'autre côté
 
-*Cette partie est à effectuer par le membre B, avec toute l'attention du membre A*
+***Cette partie est à effectuer par le membre B, avec toute l'attention du membre A***
 
 Nous voulons que les binômes A et B travaillent sur la même branche, donc il faut que B récupère la branche créée par A.
 
@@ -226,7 +228,7 @@ git fetch
 
 ## 5. 1ère Modification du fichier `finishers.txt`
 
-*Cette partie est à réaliser par le membre A, avec toute l'attention du membre B.*
+***Cette partie est à réaliser par le membre A, avec toute l'attention du membre B.***
 
 Ici, on va voir et expliquer tout le process pour la modification d'un fichier du projet. Dans un premier temps, pour faciliter la compréhension, on travaillera avec un cas général en détaillant chaque étape. Dans un second temps, on verra comment faire la même chose en passant par Visual Studio et Visual Studio Code pour simplifier les étapes.
 Prêt ? C'est parti !🏃‍♂️
@@ -338,7 +340,7 @@ Bravo ! Vous savez maintenant utiliser Git via Visual Studio Code.
 
 ### Comment gérer un conflit ?
 
-*Cette partie est à effectuer par le du membre B, avec l'attention du membre A.*
+***Cette partie est à effectuer par le du membre B, avec l'attention du membre A.***
 
 Le membre A vient de faire sa modification. C'est donc à votre tour. 
 
@@ -384,7 +386,7 @@ Pour éviter les conflits, vous devez vous assurer en permanence que votre branc
 
 ## 7. Pull Request sur GitHub
 
-*Cette partie est toujours à effectuer par le du membre B, avec l'attention du membre A.*
+***Cette partie est toujours à effectuer par le du membre B, avec l'attention du membre A.***
 
 On a fait le plus dur. Maintenant, votre code est sur la branche `tic-et-tac` du dépôt. Mais nous, on veut mettre ça sur la branche develop. Et pour ça, il va falloir faire une demande via Github : une Pull Request (entre pros on dit une PR). Vous serez peut-être surpris d'apprendre qu'une "Pull Request" sur GitHub est l'équivalent d'une "Merge Request" sur GitLab. Dingue.
 
@@ -402,7 +404,41 @@ Bon, au travail.
 10. Une fois la revue faite, **et seulement après**, vous pouvez merger la PR pour que vos changements arrivent sur develop.
 11. Si tout est ok, il est recommandé de supprimer la branche de travail, c'est à dire `tic-et-tac`. Sinon il y aura 51465857 branches sur le repo et quand dans 2 ans un(e) développeur(euse) reprendra le projet il ne sera pas très heureux(se). Pensez à lui(elle).
 
-## 8. Parlons de Gitflow
+### 8. Faire un code Review
+
+***Cette partie est toujours à effectuer par le du membre A, avec l'attention du membre B.***
+
+Voyons ce que ça donne de l'autre côté du miroir. Supposons qu'un(e) de vos collègues ait fait une PR et vous demande de la relire. Ça peut arriver, il faut se préparer à tout.
+
+À cette occasion, vous recevez ce message : 
+
+*Coucou! J'ai fini de coder le machin qu'il manquait au truc pour que le bidule fonctionne comme indiqué dans les specs! Je te donne le lien de la PR, tu peux la review ASAP ?*
+
+Vous ne pouvez plus reculer, vous êtes pris au piège... Cliquez sur le lien et rendez-vous sur la PR. Ici, vous pouvez voir les modifications faites par votre collègue, et vous pouvez choisir d'approuver ou de rejeter la PR. Vous pouvez également faire un commentaire et ne pas approuver tout de suite.
+
+![](C:\Users\louisc\Desktop\Clipboard%20-%2017%20juin%202024%2017_20.png)
+
+Vous pouvez également faire une suggestion de modification pour faciliter la vie de votre collègue.
+
+![](C:\Users\louisc\Desktop\Clipboard%20-%2017%20juin%202024%2017_24.png)
+
+Une fois tous vos commentaires et suggestions faits, cliquez sur "finish my review".
+
+Avec les suggestions, votre collègue pourra faire sa modification directement depuis Github :
+
+![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-17-25-54-image.png)
+
+Bon à savoir : même si une PR est en cours, il est encore possible de pusher des changements sur la branche source. Ils seront automatiquement ajoutés dans la PR.
+
+## 9. Merger une Pull Request
+
+Sur Github, après l'approbation des changements par le membre A, c'est au membre B de merger ses modifications, en appuyant sur "Merge pull request" :
+
+![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-18-11-04-00-image.png)
+
+Voilà, votre code est dans la branche develop sur le dépôt !
+
+## 10. Parlons de Gitflow
 
 Bon, maintenant on se parle entre pros. Pour bien utiliser Git, il faut respecter des conventions. L'une de ces conventions concerne la méthodologie de manipulation des branches et est largement utilisée dans le milieu du développement : c'est Gitflow.
 
@@ -466,31 +502,7 @@ En résumé :
 
 Gitflow permet ainsi de structurer efficacement le développement, la préparation des versions et la correction rapide des bugs, tout en maintenant une qualité de code élevée.
 
-### 9. Faire un code Review
-
-*Cette partie est toujours à effectuer par le du membre A, avec l'attention du membre B.*
-
-Voyons ce que ça donne de l'autre côté du miroir. Supposons qu'un(e) de vos collègues ait fait une PR et vous demande de la relire. Ça peut arriver, il faut se préparer à tout.
-
-À cette occasion, vous recevez ce message : 
-
-*Coucou! J'ai fini de coder le machin qu'il manquait au truc pour que le bidule fonctionne comme indiqué dans les specs! Je te donne le lien de la PR, tu peux la review ASAP ?*
-
-Vous ne pouvez plus reculer, vous êtes pris au piège... Cliquez sur le lien et rendez-vous sur la PR. Ici, vous pouvez voir les modifications faites par votre collègue, et vous pouvez choisir d'approuver ou de rejeter la PR. Vous pouvez également faire un commentaire et ne pas approuver tout de suite.
-
-![](C:\Users\louisc\Desktop\Clipboard%20-%2017%20juin%202024%2017_20.png)
-
-Vous pouvez également faire une suggestion de modification pour faciliter la vie de votre collègue.
-
-![](C:\Users\louisc\Desktop\Clipboard%20-%2017%20juin%202024%2017_24.png)
-
-Une fois tous vos commentaires et suggestions faits, cliquez sur "finish my review".
-
-Avec les suggestions, votre collègue pourra faire sa modification directement depuis Github :
-
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-17-25-54-image.png)
-
-## 10. Commandes utiles
+## 11. Commandes utiles
 
 Ce workshop aborde les points élémentaires de Git, mais vous vous trouverez aussi dans des situations moins conventionnelles.
 
