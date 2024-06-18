@@ -539,3 +539,5 @@ Si quelque chose n'est pas clair, allez voir la documentation Git, qui est très
 ### Conclusion
 
 Ce workshop vous a permis de comprendre les commandes de base de Git, le principe de Gitflow, et l'utilisation de GitHub, tout en intégrant Git à vos IDEs. Pratiquez régulièrement ces commandes et conventions pour devenir plus efficace dans la gestion de vos dépôts Git.
+
+S'il vous plaît, donnez votre avis à propos du workshop sur ce sondage : [Survey: main page (take survey) | Intranet Apitech](https://odoo.joona.fr/survey/start/ff56b21f-4790-4d99-ab44-26b4249cf955). Cela permettra d'adapter les éventuels prochains !😉
