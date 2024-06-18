@@ -444,6 +444,8 @@ Bon, maintenant on se parle entre pros. Pour bien utiliser Git, il faut respecte
 
 Gitflow repose sur l'utilisation de branches spécifiques pour différentes phases du développement, permettant une séparation claire des tâches et une meilleure gestion des versions et des corrections de bugs.
 
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/Capture-gitflow.PNG)
+
 ### Rôles des branches
 
 1. **main (ou master)** :
