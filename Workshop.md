@@ -120,7 +120,7 @@ Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du 
 
 4. **Copiez le lien de clonage :**
    
-   ![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-15-42-34-image.png)
+   <img src="https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-17-15-42-34-image.png" title="" alt="" data-align="center">
    
    - Sur la page principale du dépôt, cherchez le bouton vert "Code" en haut à droite de la liste des fichiers.
    
@@ -139,7 +139,7 @@ Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du 
    
    - Si vous utilisez Windows, vous pouvez ouvrir Git Bash avec un clic droit dans le répertoire où vous souhaitez cloner le dépôt
    
-   <img title="" src="file:///C:/Users/louisc/AppData/Roaming/marktext/images/2024-06-06-16-45-13-image.png" alt="" width="390" data-align="center">
+   <img title="" src="https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-06-16-45-13-image.png" alt="" width="390" data-align="center">
 
 2. **Cloner le dépôt :**
    
@@ -177,7 +177,7 @@ Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du 
 
 À ce stade, la situation ressemble à ça : 
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-12-17-02-27-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-12-17-02-27-image.png)
 
 ### Créer la branche d'un côté
 
@@ -192,7 +192,7 @@ git checkout develop #on se met sur develop
 git checkout -b tic-et-tac #on se met sur une nouvelle branche tic-et-tac
 ```
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-12-17-03-08-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-12-17-03-08-image.png)
 
 C'est la commande `git push` qui nous permettra de mettre la branche sur le dépôt.
 
@@ -210,7 +210,7 @@ git push -u origin tic-et-tac
 
 `origin` étant le mot clé désignant le dépôt.
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-12-17-03-39-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-12-17-03-39-image.png)
 
 ### Récupérer la branche de l'autre côté
 
@@ -224,7 +224,7 @@ Rien de plus simple, pour cela on tape la commande :
 git fetch
 ```
 
-## ![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-12-17-04-07-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-12-17-04-07-image.png)
 
 ## 5. 1ère Modification du fichier `finishers.txt`
 
@@ -235,7 +235,7 @@ Prêt ? C'est parti !🏃‍♂️
 
 Voilà, en image et en résumé, ce que l'on va faire ici : 
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-13-17-03-45-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-13-17-03-45-image.png)
 
 ### Cas général : Modification directe
 
@@ -250,7 +250,7 @@ C'est la commande `git add` qui est utilisée pour ajouter des modifications à 
 
 Vous pouvez consulter l'état de votre staging area avec la commande `git status`. Vous verrez alors ceci : 
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-15-50-18-Clipboard%20-%2017%20juin%202024%2015_48.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-17-15-50-18-Clipboard%20-%2017%20juin%202024%2015_48.png)
 
 Dans notre cas, on peut donc taper :
 
@@ -290,23 +290,23 @@ Refaisons tout ça beaucoup plus simplement grâce à un outil rapide, robuste e
 
 Ici, on peut observer les modifications effectuées en double cliquant sur le fichier finishers.txt, et les ajouter au prochain commit directement depuis Visual Studio, comme avec la commande `git add`grâce au bouton "+".
 
-![](C:\Users\louisc\Desktop\Clipboard%20-%2017%20juin%202024%2015_55.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/Clipboard%20-%2017%20juin%202024%2015_55.png)
 
-<img title="" src="file:///C:/Users/louisc/Desktop/Clipboard%20-%2017%20juin%202024%2015_57.png" alt="" data-align="center" width="273">
+<img title="" src="https://github.com/ApitechFR/workshop-git/blob/main/images/Clipboard%20-%2017%20juin%202024%2015_57.png" alt="" data-align="center" width="273">
 
 Faites-la uniquement pour le fichier finishers.txt, et vous obtiendrez ça :
 
-<img title="" src="file:///C:/Users/louisc/Desktop/thumb-Clipboard%20-%2017%20juin%202024%2016_01.png" alt="" data-align="center" width="236">
+<img title="" src="https://github.com/ApitechFR/workshop-git/blob/main/images/thumb-Clipboard%20-%2017%20juin%202024%2016_01.png" alt="" data-align="center" width="236">
 
 Nous avons volontairement ignoré le dossier "vs" créé automatiquement par visual studio pour ne pas polluer notre repo distant. Ce que l'on voit ici est la même chose que ce que vous voyez si vous retournez dans git bash et tapez `git status`. (Essayez si vous êtes cap' 😉).
 
 Pour faire le commit, entrez votre description puis cliquez sur le bouton "Valider les changements indexés". C'est un diminutif pour dire "commit" 🤫.
 
-<img title="" src="file:///C:/Users/louisc/Desktop/Clipboard%20-%2017%20juin%202024%2016_11.png" alt="" data-align="center" width="290">
+<img title="" src="https://github.com/ApitechFR/workshop-git/blob/main/images/Clipboard%20-%2017%20juin%202024%2016_11.png" alt="" data-align="center" width="290">
 
 Cliquez ensuite sur "Envoyer" pour push :
 
-<img title="" src="file:///C:/Users/louisc/Desktop/thumb-Clipboard%20-%2017%20juin%202024%2016_12.png" alt="" data-align="center" width="244">
+<img title="" src="https://github.com/ApitechFR/workshop-git/blob/main/images/thumb-Clipboard%20-%2017%20juin%202024%2016_12.png" alt="" data-align="center" width="244">
 
 Bravo ! Vous savez maintenant comment utiliser git avec Visual Studio !
 
@@ -318,7 +318,7 @@ Bravo ! Vous savez maintenant comment utiliser git avec Visual Studio !
 4. Sauvegardez le fichier.
 5. De la même manière qu'avec Visual Studio, vous pouvez visualiser les modifications Git depuis l'onglet "Source control" à Gauche :
 
-![](C:\Users\louisc\Desktop\Clipboard%20-%2017%20juin%202024%2016_35.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/Clipboard%20-%2017%20juin%202024%2016_35.png)
 
 Ici, on peut observer les modifications effectuées, et les ajouter au prochain commit directement depuis Visual Studio Code.
 
@@ -332,7 +332,7 @@ Faites la même chose qu'avec Visual Studio :
 
 - Puis pushez avec le bouton "Push"
 
-![](C:\Users\louisc\Desktop\Clipboard%20-%2017%20juin%202024%2016_38.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/Clipboard%20-%2017%20juin%202024%2016_38.png)
 
 Bravo ! Vous savez maintenant utiliser Git via Visual Studio Code.
 
@@ -356,17 +356,17 @@ Là, si vous avez bien travaillé, il devrait y avoir un problème. Et quel prob
 
 Ce qui se passe est un "conflit". Cela arrive parce que vos modifications ont pour point de départ une version du fichier qui n'est plus d'actualité. Par conséquent git ne sait pas quelle modification choisir entre la vôtre et celle de votre binôme.
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-17-04-45-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-17-17-04-45-image.png)
 
 Tapez `git pull` pour récupérer la modification de votre camarade. Pour vous indiquer qu'une résolution de conflit est en cours, la mention `MERGING` est affichée à côté du nom de la branche dans git bash.
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-17-04-25-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-17-17-04-25-image.png)
 
 Pour vous aider à résoudre le conflit, git a une stratégie qui est de vous afficher les 2 versions pour que vous choisissiez quelles modifications garder.
 
 Ouvrez votre dossier sur Visual Studio Code, puis cliquez sur finisers.txt depuis l'onglet Git.
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-17-05-59-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-17-17-05-59-image.png)
 
 Les parties conflictuelles du fichier se colorent et VSCode vous propose différentes solutions : "Accept current change", "Accept incoming", "Accept both", "Compare". Dans notre cas, on veut bien sûr conserver les deux modifications, donc :
 
@@ -376,7 +376,7 @@ Les parties conflictuelles du fichier se colorent et VSCode vous propose différ
 
 - Add, commit & push via visual studio
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-17-11-17-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-17-17-11-17-image.png)
 
 Magie, tout est réglé.
 
@@ -416,17 +416,17 @@ Voyons ce que ça donne de l'autre côté du miroir. Supposons qu'un(e) de vos c
 
 Vous ne pouvez plus reculer, vous êtes pris au piège... Cliquez sur le lien et rendez-vous sur la PR. Ici, vous pouvez voir les modifications faites par votre collègue, et vous pouvez choisir d'approuver ou de rejeter la PR. Vous pouvez également faire un commentaire et ne pas approuver tout de suite.
 
-![](C:\Users\louisc\Desktop\Clipboard%20-%2017%20juin%202024%2017_20.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/Clipboard%20-%2017%20juin%202024%2017_20.png)
 
 Vous pouvez également faire une suggestion de modification pour faciliter la vie de votre collègue.
 
-![](C:\Users\louisc\Desktop\Clipboard%20-%2017%20juin%202024%2017_24.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/Clipboard%20-%2017%20juin%202024%2017_24.png)
 
 Une fois tous vos commentaires et suggestions faits, cliquez sur "finish my review".
 
 Avec les suggestions, votre collègue pourra faire sa modification directement depuis Github :
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-17-25-54-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-17-17-25-54-image.png)
 
 Bon à savoir : même si une PR est en cours, il est encore possible de pusher des changements sur la branche source. Ils seront automatiquement ajoutés dans la PR.
 
@@ -434,7 +434,7 @@ Bon à savoir : même si une PR est en cours, il est encore possible de pusher d
 
 Sur Github, après l'approbation des changements par le membre A, c'est au membre B de merger ses modifications, en appuyant sur "Merge pull request" :
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-18-11-04-00-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-18-11-04-00-image.png)
 
 Voilà, votre code est dans la branche develop sur le dépôt !
 
