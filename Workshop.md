@@ -120,7 +120,7 @@ Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du 
 
 4. **Copiez le lien de clonage :**
    
-   ![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-17-15-42-34-image.png)
+   <img src="file:///C:/Users/louisc/Desktop/workshop-git/images/2024-06-17-15-42-34-image.png" title="" alt="" data-align="center">
    
    - Sur la page principale du dépôt, cherchez le bouton vert "Code" en haut à droite de la liste des fichiers.
    
