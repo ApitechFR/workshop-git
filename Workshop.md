@@ -139,7 +139,7 @@ Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du 
    
    - Si vous utilisez Windows, vous pouvez ouvrir Git Bash avec un clic droit dans le répertoire où vous souhaitez cloner le dépôt
    
-   <img title="" src="file:///C:/Users/louisc/AppData/Roaming/marktext/images/2024-06-06-16-45-13-image.png" alt="" width="390" data-align="center">
+   <img title="" src="https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-06-16-45-13-image.png" alt="" width="390" data-align="center">
 
 2. **Cloner le dépôt :**
    
@@ -177,7 +177,7 @@ Pour cloner un dépôt GitHub, vous devez d'abord obtenir le lien de clonage du 
 
 À ce stade, la situation ressemble à ça : 
 
-![](C:\Users\louisc\AppData\Roaming\marktext\images\2024-06-12-17-02-27-image.png)
+![](https://github.com/ApitechFR/workshop-git/blob/main/images/2024-06-12-17-02-27-image.png)
 
 ### Créer la branche d'un côté
 
